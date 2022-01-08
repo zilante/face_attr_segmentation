@@ -22,9 +22,9 @@
 
 Среди всех подходов наивысший fscore получился у архитектуры FPN с encoder'ом MobileNet ([ссылка](https://drive.google.com/file/d/1t3AZ8ZzaCQXBPA9V5p3pqgM1A50KCqQN/view?usp=sharing) на веса модели). Ниже представлены результаты, которые получились на тестовом множестве:
 
-|           |skin|nose|eye_g|l_eye|r_eye|l_brow|r_brow|l_ear|r_ear|mouth|u_lip|l_lip|hair|hat|ear_r|neck_l|neck|cloth|
-|-----------|:--:|:--:|:---:|:---:|:---:|:----:|:----:|:---:|:---:|:---:|:---:|:---:|:--:|:-:|:---:|:----:|:--:|:---:|
-|Dice-score |    |    |     |     |     |      |      |     |     |     |     |     |    |   |     |      |    |     |
+|           |skin |nose |eye_g|l_eye|r_eye|l_brow|r_brow|l_ear|r_ear|mouth|u_lip|l_lip|hair |hat  |ear_r|neck_l|neck |cloth|
+|-----------|:---:|:---:|:---:|:---:|:---:|:----:|:----:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:----:|:---:|:---:|
+|Dice-score |0.924|0.883|0.757|0.839|0.835|0.794 |0.783 |0.777|0.775|0.848|0.827|0.846|0.892|0.504|0.54 |0.151 |0.828|0.744|
 
 ### Результаты опробованных подходов
 
@@ -70,3 +70,6 @@ $ python3 test.py -d <device> -v <path_to_dir_to_save_visualizations> <path_to_m
 ```bash
 $ python3 test.py -h
 ````
+
+### Пример
+Пример обучения, тестирования и визуализации представлен в директории `"/examples"`.
