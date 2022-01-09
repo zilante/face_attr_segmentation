@@ -115,7 +115,7 @@ def parse_args():
                         help='path to the model weights')
 
     parser.add_argument('data_dir', metavar='D', type=str,
-                        help='path to the data')
+                        help='path to the dir, containing the \'/CelebAMask-HQ\' dir')
 
     parser.add_argument('split_info_path', metavar='S', type=str,
                         help='path to the split information')

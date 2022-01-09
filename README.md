@@ -18,7 +18,7 @@
 - MobileNet (mobilenet_v2);
 
 Для обучения и тестирования использовались не все данные, а только 5000 картинок: 3375 на train,
-375 на validation и 1250 на test. В качестве loss'а при обучении считался [DiceLoss](https://github.com/qubvel/segmentation_models.pytorch/blob/master/segmentation_models_pytorch/losses/dice.py). Итоговыми брались те веса модели, при которых достигалось максимальное значение fscore (средний Dice-score по всем классам) на валидационной выборке.
+375 на validation и 1250 на test. В качестве loss'а при обучении считался [DiceLoss](https://github.com/qubvel/segmentation_models.pytorch/blob/master/segmentation_models_pytorch/losses/dice.py). Итоговыми брались те веса модели, при которых достигалось максимальное значение fscore на валидационной выборке (средний Dice-score по всем классам) за все 8 эпох обучения.
 
 Среди всех подходов наивысший fscore получился у архитектуры FPN с encoder'ом MobileNet ([ссылка](https://drive.google.com/file/d/1t3AZ8ZzaCQXBPA9V5p3pqgM1A50KCqQN/view?usp=sharing) на веса модели). Ниже представлены результаты, которые получились на тестовом множестве:
 
@@ -72,4 +72,4 @@ $ python3 test.py -h
 ````
 
 ### Пример
-Пример обучения, тестирования и визуализации представлен в директории `"/examples"`.
+Пример обучения, тестирования и визуализации представлен в директории `"/example"`.
